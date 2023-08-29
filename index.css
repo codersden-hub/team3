@@ -1,0 +1,121 @@
+ /* * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;
+    width: 40%;
+    background-image: linear-gradient(to bottom right, #be4bdb, #f3d9fa );
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+}
+.container {
+    margin-top: 2.5em;
+    padding: 2em;
+    background-color: white;
+    text-align: center;
+    border-radius: 10px;
+    height: 80vh;
+    
+    
+}
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    height: 1.5em;
+}
+input {
+
+    font-size: 1.2em;
+}
+
+.logbtn {
+    background-image: linear-gradient(to bottom right, #be4bdb, #f3d9fa );
+    width: 70%;
+    border: none;
+    border-radius: 20px;
+    padding: 0.8em;
+    font-size: 1.2em;
+    font-weight: bolder;
+    cursor: pointer;
+    
+    
+}
+.logbtn:hover {
+    background-image: none;
+
+}
+.loglink {
+    text-decoration: none;
+}
+
+.loglink:hover {
+    font-size: 1.1em;
+   
+} */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to bottom right, #be4bdb, #f3d9fa);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 80%;
+    max-width: 400px;
+    padding: 2em;
+    background-color: white;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    height: 2em;
+    margin-top: 0.5em;
+    padding: 0.2em;
+}
+
+.logbtn {
+    background-image: linear-gradient(to bottom right, #be4bdb, #f3d9fa);
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    padding: 0.8em;
+    font-size: 1em;
+    font-weight: bolder;
+    cursor: pointer;
+    margin-top: 1em;
+}
+
+.loglink {
+    text-decoration: none;
+}
+
+.loglink:hover {
+    font-size: 1em;
+}
