@@ -86,9 +86,10 @@ body{
 
   .content > h2 {
     color: white;
-    display: flex;
-    align-items: center;
-    margin-left: 7%;
+  }
+
+  .play_icon > img {
+    width: 47%;
   }
   
 }
