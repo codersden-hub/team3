@@ -51,7 +51,11 @@ signUp.addEventListener('click', function(event){
         console.log(obj.email, obj.password)
     })
     .catch(function(err){
-        alert("error" + err)
+      alert("error"+ err)
+        if("error" + err){
+          result.innerText = " Sorry! this Email is already in use"
+        } 
+       
     })
     
     console.log(obj)
