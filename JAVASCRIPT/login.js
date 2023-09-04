@@ -23,7 +23,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.0/firebas
 
 const email = document.querySelector('.email')
 const passWord = document.querySelector('.pasword')
-const result = document.querySelector('.display')
+//const result = document.querySelector('.display')
 const login = document.querySelector('.login-btn')
 
 
@@ -33,17 +33,34 @@ login.addEventListener('click', function(event){
    password: passWord.value,
    email: email.value,
  }
-
+      
  signInWithEmailAndPassword(auth, logObj.email, logObj.password
     ).then(function(success){
         result.innerText = ` welcome ${logObj.email}, you are signed in`
         alert("Sigin succesfully")
+        window.location.href = "/team3/index.html"
+        
     })
-    .catch(function(err){
-        alert("error" + err)
-        result.innerText = 'Please signup, username and email not found'
+    .catch(function(error){
+        alert( error)
+       /*
+        const errorCode = error.code;
+      const errorMessage = error.message;
+
+        if (errorCode === 'auth/wrong-password') {
+          // Display error message in red text
+          result.innerText = 'Wrong password';
+          result.style.color = 'red';
+        } else {
+          // Handle other login errors
+          result.innerText = errorMessage;
+          result.style.color = 'red';
+        }
+       */
     })
     
+
+   
     console.log(logObj)
 
     /*
