@@ -100,7 +100,7 @@ input[type="email"] {
     padding: 0.2em;
 }
 
-.logbtn,  .login-btn{
+.logbtn {
     background-image: linear-gradient(to bottom right, #be4bdb, #f3d9fa);
     width: 100%;
     border: none;
@@ -118,11 +118,4 @@ input[type="email"] {
 
 .loglink:hover {
     font-size: 1em;
-}
-
-
-.display{
-    margin-bottom:800px;
-    color: #fff;
-    font-size: 50px;
 }
