@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trivia Questions</title>
+  </head>
+  <body>
+    <div class="content general">
+      <div class="question-container">
+        <p class="question"></p>
+        <ul class="choices"></ul>
+      </div>
+      <button class="next-button">Next</button>
+      <h2 class="general-heading"></h2>
+    </div>
+    <div class="content sport">
+      <div class="question-container">
+        <p class="question"></p>
+        <ul class="choices"></ul>
+      </div>
+      <button class="next-button">Next</button>
+      <h2 class="sport-heading"></h2>
+    </div>
+    <div class="content travel">
+      <div class="question-container">
+        <p class="question"></p>
+        <ul class="choices"></ul>
+      </div>
+      <button class="next-button">Next</button>
+      <h2 class="travel-heading"></h2>
+    </div>
+
+    <script>
+      // Function to fetch and display a trivia question
+      async function fetchQuestion(general) {
+        const response = await fetch(
+          `https://opentdb.com/api.php?amount=1&category=${9}&type=multiple`
+        );
+        const data = await response.json();
+
+        const questionContainer = document.querySelector(
+          `.${general} .question-container`
+        );
+        const questionElement = questionContainer.querySelector(".question");
+        const choicesElement = questionContainer.querySelector(".choices");
+        const nextButton = document.querySelector(`.${general} .next-button`);
+        const heading = document.querySelector(`.${general} h2`);
+
+        const questionData = data.results[0];
+        questionElement.textContent = questionData.question;
+
+        choicesElement.innerHTML = "";
+        questionData.incorrect_answers.forEach((choice) => {
+          const li = document.createElement("li");
+          li.textContent = choice;
+          choicesElement.appendChild(li);
+        });
+        const correctChoice = document.createElement("li");
+        correctChoice.textContent = questionData.correct_answer;
+        choicesElement.appendChild(correctChoice);
+
+        nextButton.addEventListener("click", () => {
+          fetchQuestion(general);
+        });
+
+        heading.textContent =
+          general.charAt(0).toUpperCase() + general.slice(1);
+      }
+
+      fetchQuestion("general");
+      fetchQuestion("sport");
+      fetchQuestion("travel");
+    </script>
+  </body>
+</html>
