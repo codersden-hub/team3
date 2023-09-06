@@ -1,0 +1,33 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* font-family: Arial, Helvetica, sans-serif;
+  margin: auto;
+  width: 40%; */
+  background-image: linear-gradient(to bottom right, #be4bdb, #f3d9fa);
+  background-repeat: no-repeat;
+  background-size: 100% 100vh;
+}
+
+/* h1 {
+  font-size: 36px;
+  color: #333;
+  text-align: center;
+  margin-top: 20px;
+} */
+
+#question-container {
+  margin-top: 20px;
+  height: 130px;
+
+  margin: auto;
+  padding: auto;
+  margin-top: 150px;
+  border: 15px solid white;
+  width: auto;
+  max-width: 900px;
+}
