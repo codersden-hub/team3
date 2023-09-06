@@ -27,7 +27,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.0/firebas
   const signUp = document.querySelector('.logbtn')
   const userName = document.querySelector('.username')
   const passWord = document.querySelector('.pasword')
-  const result = document.querySelector('.display')
+  //const result = document.querySelector('.display')
   const login = document.querySelector('.login-btn')
 
 
@@ -46,16 +46,17 @@ signUp.addEventListener('click', function(event){
        
 
 
-        //alert("Signup Sucessfull")
+        alert("Signup Sucessfull")
 
         console.log(obj.email, obj.password)
     })
     .catch(function(err){
       alert("error"+ err)
+       /*
         if("error" + err){
           result.innerText = " Sorry! this Email is already in use"
         } 
-       
+       */
     })
     
     console.log(obj)
