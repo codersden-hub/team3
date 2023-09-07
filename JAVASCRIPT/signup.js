@@ -42,8 +42,8 @@ signUp.addEventListener('click', function(event){
 
    createUserWithEmailAndPassword(auth, obj.email,obj.password
     ).then(function(success){
-       result.innerText = `welcome ${obj.username} pick a qizz type`
-       
+       //result.innerText = `welcome ${obj.username} pick a qizz type`
+       window.location.href = "/team3/login.html"
 
 
         alert("Signup Sucessfull")

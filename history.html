@@ -76,7 +76,7 @@
     function displayResults() {
       questionContainer.innerHTML = `<h2>Quiz Completed</h2>
                                  <p>Your score: ${score} out of ${questions.length}</p>
-                                 <button id="restart-button">Restart Quiz</button>`;
+`;
       const restartButton = document.getElementById("restart-button");
       restartButton.addEventListener("click", () => {
         currentQuestionIndex = 0;

@@ -36,7 +36,7 @@ login.addEventListener('click', function(event){
       
  signInWithEmailAndPassword(auth, logObj.email, logObj.password
     ).then(function(success){
-        result.innerText = ` welcome ${logObj.email}, you are signed in`
+       // result.innerText = ` welcome ${logObj.email}, you are signed in`
         alert("Sigin succesfully")
         window.location.href = "/team3/index.html"
         
