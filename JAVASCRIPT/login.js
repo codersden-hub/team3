@@ -38,7 +38,7 @@ login.addEventListener('click', function(event){
     ).then(function(success){
        // result.innerText = ` welcome ${logObj.email}, you are signed in`
         alert("Sigin succesfully")
-        window.location.href = "/team3/index.html"
+        window.location.href = "./index.html"
         
     })
     .catch(function(error){
