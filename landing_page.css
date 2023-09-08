@@ -33,9 +33,10 @@ body{
 }
 .htext {
   /* background-color: white; */
-  flex: 2;
-  font-size: 1.5em;
+  flex: 2.5;
+  font-size: 1.8em;
   padding-top: 40px;
+  font-weight: bold;
 }
 .himg {
   /* background-color: yellow; */
@@ -55,6 +56,8 @@ body{
   padding: 0.5em 0.5em;
   cursor: pointer;
   margin-right: 10px;
+  background: transparent;
+  font-size: 1.1em;
 }
 .signout-btn:hover {
   background: transparent;
