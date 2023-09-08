@@ -21,10 +21,16 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.0/firebas
   const app = initializeApp(firebaseConfig);
   const auth = getAuth()
 
+
+
+
 const email = document.querySelector('.email')
+const displayGreet = document.querySelector('.display-greeting');
 const passWord = document.querySelector('.pasword')
-//const result = document.querySelector('.display')
 const login = document.querySelector('.login-btn')
+
+
+
 
 
 login.addEventListener('click', function(event){
@@ -36,9 +42,11 @@ login.addEventListener('click', function(event){
       
  signInWithEmailAndPassword(auth, logObj.email, logObj.password
     ).then(function(success){
-       // result.innerText = ` welcome ${logObj.email}, you are signed in`
+
+      
         alert("Sigin succesfully")
         window.location.href = "./index.html"
+       
         
     })
     .catch(function(error){
