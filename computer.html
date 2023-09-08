@@ -51,6 +51,7 @@
       const currentQuestion = questions[currentQuestionIndex];
       if (selectedChoice === currentQuestion.correct_answer) {
         // Increment score or provide feedback
+        score++;
       }
       currentQuestionIndex++;
       if (currentQuestionIndex < questions.length) {
