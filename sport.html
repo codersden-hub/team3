@@ -4,12 +4,12 @@
     <title>Quiz Website</title>
   </head>
   <body>
-    <h1>Quiz Time!</h1>
+    <h1>Take Quiz!</h1>
     <div id="question-container">
       <p id="question"></p>
       <ul id="choices"></ul>
     </div>
-    <button id="next-button">Next</button>
+    <!-- <button id="next-button">Next</button> -->
   </body>
   <script>
     const apiUrl =
@@ -17,7 +17,7 @@
     const questionContainer = document.getElementById("question-container");
     const questionElement = document.getElementById("question");
     const choicesElement = document.getElementById("choices");
-    const nextButton = document.getElementById("next-button");
+    // const nextButton = document.getElementById("next-button");
     let currentQuestionIndex = 0;
     let questions = [];
 
@@ -51,6 +51,7 @@
       const currentQuestion = questions[currentQuestionIndex];
       if (selectedChoice === currentQuestion.correct_answer) {
         // Increment score or provide feedback
+        score++;
       }
       currentQuestionIndex++;
       if (currentQuestionIndex < questions.length) {
@@ -61,15 +62,15 @@
       }
     }
 
-    nextButton.addEventListener("click", () => {
-      currentQuestionIndex++;
-      if (currentQuestionIndex < questions.length) {
-        displayQuestion();
-      } else {
-        // Quiz finished, show results
-        displayResults();
-      }
-    });
+    // nextButton.addEventListener("click", () => {
+    //   currentQuestionIndex++;
+    //   if (currentQuestionIndex < questions.length) {
+    //     displayQuestion();
+    //   } else {
+    //     // Quiz finished, show results
+    //     displayResults();
+    //   }
+    // });
 
     let score = 0;
 
@@ -78,12 +79,12 @@
                                  <p>Your score: ${score} out of ${questions.length}</p>
                                  
                                  `;
-      const restartButton = document.getElementById("restart-button");
-      restartButton.addEventListener("click", () => {
-        currentQuestionIndex = 0;
-        score = 0;
-        fetchQuestions();
-      });
+      // const restartButton = document.getElementById("restart-button");
+      // restartButton.addEventListener("click", () => {
+      //   currentQuestionIndex = 0;
+      //   score = 0;
+      //   fetchQuestions();
+      // });
     }
 
     fetchQuestions();
