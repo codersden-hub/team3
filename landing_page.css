@@ -19,6 +19,10 @@ body{
   display: flex;
   width: 100%;
   height: fit-content;
+  justify-content: center;
+  align-items: center;
+  
+ 
 }
 .hlogo {
   flex: 7;
@@ -26,21 +30,33 @@ body{
 }
 .hbtn {
   flex: 2;
-  justify-content: right;
+  justify-content:center;
+  align-items:center;
   display: flex;
   padding-top: 33px;
   /* background-color: blue; */
+  
 }
 .htext {
-  /* background-color: white; */
-  flex: 2.5;
-  font-size: 1.8em;
+  color:#fff;
+  flex: 3.5;
+  font-size: 2.4rem;
   padding-top: 40px;
-  font-weight: bold;
+  font-weight:900;
 }
 .himg {
   /* background-color: yellow; */
   width: 10%;
+  color:#fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-image{
+  width: 90px;
+  height: 90px;
+  margin-top: 40px;
 }
 
 .plogo {
@@ -58,9 +74,14 @@ body{
   margin-right: 10px;
   background: transparent;
   font-size: 1.1em;
+  color:#fff;
+  background: transparent;
+  border: 2px solid #da77f2;
+  font-weight: 700;
+  
 }
 .signout-btn:hover {
-  background: transparent;
+ 
 }
 
 .container {
@@ -81,6 +102,7 @@ body{
   width: 17%;
 }
 
+
 .content {
   width: 30%;
   height: 10rem;
@@ -95,6 +117,47 @@ body{
   color: white;
   margin-left: 2%;
 }
+
+
+.music-class,.science,.general-class, .sport-class, 
+.history-class, .computer-class{
+  color: #fff;
+  text-decoration: none;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.music-class:hover{
+  color: #7950f2;
+  transition: color 0.3s ease;
+}
+
+.science:hover{
+  color: #7950f2;
+  transition: color 0.3s ease;
+}
+
+.general-class:hover{
+  color: #7950f2;
+  transition: color 0.3s ease;
+}
+
+
+.sport-class:hover{
+  color: #7950f2;
+  transition: color 0.3s ease;
+}
+
+.history-class:hover{
+  color: #7950f2;
+  transition: color 0.3s ease;
+}
+
+.computer-class:hover{
+  color: #7950f2;
+  transition: color 0.3s ease;
+}
+
 
 .general {
   background: linear-gradient(90deg, rgba(241,127,132,1) 1%, rgba(231,95,58,1) 40%, rgba(235,30,30,1) 100%, rgba(0,212,255,1) 100%);
