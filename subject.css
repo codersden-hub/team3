@@ -64,6 +64,7 @@ li {
 
 li:hover {
   background: #e38afc;
+  cursor: pointer;
 }
 
 button {
