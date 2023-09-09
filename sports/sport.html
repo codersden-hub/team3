@@ -1,23 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="subject.css" />
+    <link rel="stylesheet" href="../subject.css" />
     <title>Quiz Website</title>
   </head>
   <body>
-    <h1>Quiz Time!</h1>
+    <h1>Take Quiz!</h1>
     <div id="question-container">
       <p id="question"></p>
       <ul id="choices"></ul>
     </div>
   </body>
   <script>
-
-
-
-
     const apiUrl =
-      "https://opentdb.com/api.php?amount=10&category=17&difficulty=easy&type=multiple";
+      "https://opentdb.com/api.php?amount=10&category=21&difficulty=easy&type=multiple"; // Example Trivia API URL
     const questionContainer = document.getElementById("question-container");
     const questionElement = document.getElementById("question");
     const choicesElement = document.getElementById("choices");
@@ -69,7 +65,7 @@
     let score = 0;
 
     function displayResults() {
-      questionContainer.innerHTML = `<h2>Quiz Completed</h2>  <p>Your score: ${score} out of ${questions.length}</p>  <h3>🏆🏆🏆</h3> `;
+      `<h2>Quiz Completed</h2>  <p>Your score: ${score} out of ${questions.length}</p>  <h3>🏆🏆🏆</h3> `;
     }
 
     fetchQuestions();

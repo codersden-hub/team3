@@ -20,30 +20,30 @@ if(userEmail){
 }
 
 science.addEventListener('click', function(){
-    window.location.href = "./modal.html";
+    window.location.href = "./science/sciencemodal.html";
 })
 
 music.addEventListener('click', function(){
-    window.location.href = "./musicmodal.html";
+    window.location.href = "./music/musicmodal.html";
 })
 
 general.addEventListener('click', function(){
-    window.location.href = "./generalmodal.html";
+    window.location.href = "../general/generalmodal.html";
     
 })
 
 
 sports.addEventListener('click', function(){
-    window.location.href = "./sportsmodal.html";
+    window.location.href = "../sports/sportsmodal.html";
 })
 
 history.addEventListener('click', function(){
 
-    window.location.href = "./historymodal.html";
+    window.location.href = "./history/historymodal.html";
 })
 
 computer.addEventListener('click', function(){
-    window.location.href = "./computermodal.html";
+    window.location.href = "./computer/computermodal.html";
 })
 
 

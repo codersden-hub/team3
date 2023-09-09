@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="subject.css" />
+    <link rel="stylesheet" href="../subject.css" />
     <title>Quiz Website</title>
   </head>
   <body>
-    <h1>Take Quiz!</h1>
+    <h1>Quiz Time!</h1>
     <div id="question-container">
       <p id="question"></p>
       <ul id="choices"></ul>
     </div>
+    <!-- <button id="next-button">Next</button> -->
   </body>
   <script>
     const apiUrl =
-      "https://opentdb.com/api.php?amount=10&category=21&difficulty=easy&type=multiple"; // Example Trivia API URL
+      "https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple"; // Example Trivia API URL
     const questionContainer = document.getElementById("question-container");
     const questionElement = document.getElementById("question");
     const choicesElement = document.getElementById("choices");
-
+    // const nextButton = document.getElementById("next-button");
     let currentQuestionIndex = 0;
     let questions = [];
 
@@ -62,10 +63,26 @@
       }
     }
 
+    // nextButton.addEventListener("click", () => {
+    //   currentQuestionIndex++;
+    //   if (currentQuestionIndex < questions.length) {
+    //     displayQuestion();
+    //   } else {
+    //     // Quiz finished, show results
+    //     displayResults();
+    //   }
+    // });
+
     let score = 0;
 
     function displayResults() {
-      `<h2>Quiz Completed</h2>  <p>Your score: ${score} out of ${questions.length}</p>  <h3>🏆🏆🏆</h3> `;
+      questionContainer.innerHTML = `<h2>Quiz Completed</h2>  <p>Your score: ${score} out of ${questions.length}</p>  <h3>🏆🏆🏆</h3> `;
+      // const restartButton = document.getElementById("restart-button");
+      // restartButton.addEventListener("click", () => {
+      //   currentQuestionIndex = 0;
+      //   score = 0;
+      //   fetchQuestions();
+      // });
     }
 
     fetchQuestions();

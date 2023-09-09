@@ -5,7 +5,7 @@ const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.close-modal');
 const btnsOpenModal = document.querySelectorAll('.show-modal');
-const buttonFour = document.querySelector('.btn-four')
+const buttonFive = document.querySelector('.btn-five')
 
 
 const openModal = function () {
@@ -17,7 +17,7 @@ const openModal = function () {
 const closeModal = function () {
   modal.classList.add('hidden');
   overlay.classList.add('hidden');
-  window.location.href = "./index.html"
+  window.location.href = "../index.html"
 };
 
 openModal()
@@ -39,7 +39,7 @@ document.addEventListener('keydown', function (e) {
 });
 
 
-buttonFour.addEventListener('click', function(){
-    window.location.href = "./history.html";
+buttonFive.addEventListener('click', function(){
+    window.location.href = "./computer.html";
   })
   
