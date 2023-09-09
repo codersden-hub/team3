@@ -26,6 +26,8 @@
       const data = await response.json();
       questions = data.results;
 
+     
+
       // Remove symbols that is not clean
       questions = data.results.map(question => ({
          ...question,
@@ -34,9 +36,14 @@
       displayQuestion();
     }
 
+
+
+
     function removeHtmlEntities(text) {
   return text.replace(/&[^;]+;/g, ''); // Replace all HTML entities
     }
+
+
 
     function displayQuestion() {
       const currentQuestion = questions[currentQuestionIndex];
