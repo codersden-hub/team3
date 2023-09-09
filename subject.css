@@ -1,0 +1,102 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #be4bdb;
+  /* background: linear-gradient(to bottom right, #be4bdb, #f3d9fa);
+  background-repeat: no-repeat;
+  background-size: cover; */
+}
+
+h1 {
+  font-size: 30px;
+  color: #333;
+  text-align: center;
+  margin-top: 15px;
+  color: white;
+}
+
+#question-container {
+  /* margin-top: 10px;
+  height: 130px; */
+  margin: auto;
+  padding: auto;
+  margin-top: 10px;
+
+  width: auto;
+  max-width: 900px;
+}
+
+#question {
+  width: auto;
+  max-width: 900px;
+  background: transparent;
+  margin-bottom: 10px;
+  height: 100px;
+  border-radius: 20px;
+  padding-top: 28px;
+  border: 2px solid white;
+  font-size: 25px;
+  margin: auto;
+  padding: auto;
+  color: white;
+}
+
+ul {
+  width: auto;
+  max-width: 850px;
+  list-style: none;
+  margin: auto;
+  padding: auto;
+  color: white;
+}
+
+li {
+  padding: 9px;
+  border: 1.5px solid white;
+  border-radius: 30px;
+  margin: 24px;
+  text-align: center;
+}
+
+li:hover {
+  background: #e38afc;
+  cursor: pointer;
+}
+
+button {
+  width: 25%;
+  height: 3em;
+  border-radius: 20px;
+  padding: 0.5em 0.5em;
+  cursor: pointer;
+  margin-right: 10px;
+  background: transparent;
+  font-size: 1.1em;
+  color: #fff;
+  background: transparent;
+  border: 2px solid #da77f2;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 90px;
+  text-align: center;
+  font-style: italic;
+  padding-top: 50px;
+  color: white;
+}
+p {
+  font-size: 30px;
+  text-align: center;
+  color: white;
+}
+
+h3 {
+  text-align: center;
+  font-size: 56px;
+  padding-top: 60px;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../subject.css" />
+    <title>Quiz Website</title>
+  </head>
+  <body>
+    <h1>Quiz Time!</h1>
+    <div id="question-container">
+      <p id="question"></p>
+      <ul id="choices"></ul>
+    </div>
+  </body>
+  <script>
+    const apiUrl =
+      "https://opentdb.com/api.php?amount=10&category=12&difficulty=easy&type=multiple";
+    const questionContainer = document.getElementById("question-container");
+    const questionElement = document.getElementById("question");
+    const choicesElement = document.getElementById("choices");
+
+    let currentQuestionIndex = 0;
+    let questions = [];
+
+    async function fetchQuestions() {
+      const response = await fetch(apiUrl);
+      const data = await response.json();
+      questions = data.results.map((question) => ({
+        ...question,
+        question: removeHtmlEntities(question.question),
+      }));
+      displayQuestion();
+    }
+
+    function removeHtmlEntities(text) {
+      return text.replace(/&[^;]+;/g, "");
+    }
+
+    function displayQuestion() {
+      const currentQuestion = questions[currentQuestionIndex];
+      questionElement.innerText = currentQuestion.question;
+      choicesElement.innerHTML = "";
+
+      const choices = [
+        ...currentQuestion.incorrect_answers,
+        currentQuestion.correct_answer,
+      ];
+      choices.sort(() => Math.random() - 0.5);
+
+      choices.forEach((choice) => {
+        const choiceItem = document.createElement("li");
+        choiceItem.innerText = choice;
+        choiceItem.addEventListener("click", () => checkAnswer(choice));
+        choicesElement.appendChild(choiceItem);
+      });
+    }
+
+    function checkAnswer(selectedChoice) {
+      const currentQuestion = questions[currentQuestionIndex];
+      if (selectedChoice === currentQuestion.correct_answer) {
+        k;
+        score++;
+      }
+      currentQuestionIndex++;
+      if (currentQuestionIndex < questions.length) {
+        displayQuestion();
+      } else {
+        s;
+        displayResults();
+      }
+    }
+
+    let score = 0;
+
+    function displayResults() {
+      questionContainer.innerHTML = `<h2>Quiz Completed</h2>  <p>Your score: ${score} out of ${questions.length}</p>  <h3>🏆🏆🏆</h3> 
+      <a href="../index.html">
+      <button> Return to homepage </button>
+      </a>`;
+    }
+
+    fetchQuestions();
+  </script>
+</html>
