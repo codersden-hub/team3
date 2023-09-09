@@ -24,18 +24,15 @@
     async function fetchQuestions() {
       const response = await fetch(apiUrl);
       const data = await response.json();
-      questions = data.results;
-
-      // Remove symbols that is not clean
-      questions = data.results.map(question => ({
-         ...question,
-         question: removeHtmlEntities(question.question)
-      })) 
+      questions = data.results.map((question) => ({
+        ...question,
+        question: removeHtmlEntities(question.question),
+      }));
       displayQuestion();
     }
 
     function removeHtmlEntities(text) {
-  return text.replace(/&[^;]+;/g, ''); // Replace all HTML entities
+      return text.replace(/&[^;]+;/g, "");
     }
 
     function displayQuestion() {
@@ -60,14 +57,12 @@
     function checkAnswer(selectedChoice) {
       const currentQuestion = questions[currentQuestionIndex];
       if (selectedChoice === currentQuestion.correct_answer) {
-        // Increment score or provide feedback
         score++;
       }
       currentQuestionIndex++;
       if (currentQuestionIndex < questions.length) {
         displayQuestion();
       } else {
-        // Quiz finished, show results
         displayResults();
       }
     }
