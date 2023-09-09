@@ -63,13 +63,20 @@ li:hover {
   background: #e38afc;
 }
 
-/* button {
-  width: 150px;
-  height: 40px;
-  background-color: transparent;
-  border: 5px double white;
+button {
+  width: 25%;
+  height: 3em;
   border-radius: 20px;
-} */
+  padding: 0.5em 0.5em;
+  cursor: pointer;
+  margin-right: 10px;
+  background: transparent;
+  font-size: 1.1em;
+  color:#fff;
+  background: transparent;
+  border: 2px solid #da77f2;
+  font-weight: 700;
+}
 
 h2 {
   font-size: 90px;
