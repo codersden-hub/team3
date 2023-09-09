@@ -29,6 +29,7 @@ const passWord = document.querySelector(".pasword");
 //const result = document.querySelector('.display')
 const login = document.querySelector(".login-btn");
 
+
 login.addEventListener("click", function (event) {
   event.preventDefault();
   var logObj = {
@@ -38,9 +39,12 @@ login.addEventListener("click", function (event) {
 
   signInWithEmailAndPassword(auth, logObj.email, logObj.password)
     .then(function (success) {
-      // result.innerText = ` welcome ${logObj.email}, you are signed in`
+      // Store the user's email in session storage
+      
+       sessionStorage.setItem('userEmail', logObj.email);
       alert("Sigin succesfully");
       window.location.href = "./index.html";
+      
     })
     .catch(function (error) {
       alert(error);

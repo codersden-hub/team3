@@ -21,12 +21,13 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.0/firebas
   const app = initializeApp(firebaseConfig);
   const auth = getAuth()
 
-const signOutBtn = document.querySelector('.sign-out')
+
+const signOutBtn = document.querySelector('.signout-btn')
 
 signOutBtn.addEventListener('click', function(){
    
     signOut(auth).then(() => {
-        window.location.href = './login.html';
+      window.location.href = "./login.html";
       }).catch((error) => {
         // An error happened.
         
