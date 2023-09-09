@@ -17,7 +17,7 @@ const openModal = function () {
 const closeModal = function () {
   modal.classList.add('hidden');
   overlay.classList.add('hidden');
-  window.location.href = "./index.html"
+  window.location.href = "../index.html"
 };
 
 openModal()

@@ -5,23 +5,24 @@ const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.close-modal');
 const btnsOpenModal = document.querySelectorAll('.show-modal');
-const buttonTwo = document.querySelector('.btn-two')
+const button = document.querySelector('.btn')
+const buttonOne = document.querySelector('.btn-0ne')
 
 
 const openModal = function () {
   modal.classList.remove('hidden');
   overlay.classList.remove('hidden');
-  
 };
 
 
 const closeModal = function () {
   modal.classList.add('hidden');
   overlay.classList.add('hidden');
-  window.location.href = "./index.html"
+  window.location.href = "../index.html"
 };
 
 openModal()
+
 for (let i = 0; i < btnsOpenModal.length; i++)
   btnsOpenModal[i].addEventListener('click', openModal);
 
@@ -40,7 +41,8 @@ document.addEventListener('keydown', function (e) {
 });
 
 
-buttonTwo.addEventListener('click', function(){
-    window.location.href = "./music.html";
-  })
-  
+
+button.addEventListener('click', function(){
+    window.location.href = "./science.html";
+})
+
