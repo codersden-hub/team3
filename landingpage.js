@@ -28,13 +28,13 @@ music.addEventListener('click', function(){
 })
 
 general.addEventListener('click', function(){
-    window.location.href = "../general/generalmodal.html";
+    window.location.href = "./general/generalmodal.html";
     
 })
 
 
 sports.addEventListener('click', function(){
-    window.location.href = "../sports/sportsmodal.html";
+    window.location.href = "./sports/sportsmodal.html";
 })
 
 history.addEventListener('click', function(){

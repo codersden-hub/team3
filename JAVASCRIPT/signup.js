@@ -41,7 +41,8 @@ signUp.addEventListener("click", function (event) {
 
   createUserWithEmailAndPassword(auth, obj.email, obj.password)
     .then(function (success) {
-      //result.innerText = `welcome ${obj.username} pick a qizz type`
+      
+      //redirect to login page if its succesfull
       window.location.href = "./login.html";
 
       alert("Signup Sucessfull");
