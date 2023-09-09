@@ -81,9 +81,6 @@ body{
   font-weight: 700;
   
 }
-.signout-btn:hover {
- 
-}
 
 .container {
   display: flex;
@@ -183,7 +180,7 @@ body{
 
 /*  Media  */
 
-@media  screen and (max-width: 430px) {
+@media  screen and (max-width: 600px) {
   .content {
     width : 90%;
     display: flex;
@@ -197,6 +194,31 @@ body{
   .play_icon > img {
     width: 47%;
   }
-  
+  .header {
+    width: 80%;
+  }
+  .logo {
+    width: 150px;
+    /* margin: auto; */
+    margin-left: 50px;
+  }
+  .welcome {
+    font-size: 15px;
+    margin-top: -20px;
+    margin-left: 80px;
+  }
+  .himg {
+    margin-top: -15px;
+    margin-left: 50px;
+  }
+  .signout-btn {
+    width: 85px;
+    font-size: 16px;
+    font-weight: normal;
+    /* margin-left: 80px; */
+  }
+  .htext {
+    width: 100px;
+  }
   
 }
