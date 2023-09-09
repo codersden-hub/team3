@@ -7,6 +7,7 @@ const sports = document.querySelector('.sport-class')
 const history = document.querySelector('.history-class')
 const computer = document.querySelector('.computer-class')
 
+
 //Displaying welcome user on landing page 
 
 const userEmail = sessionStorage.getItem('userEmail')
@@ -18,6 +19,8 @@ if(userEmail){
     welcomeMessage.textContent = `Welcome, ${name}!`;
 
 }
+
+ 
 
 science.addEventListener('click', function(){
     window.location.href = "./science/sciencemodal.html";
