@@ -30,6 +30,7 @@ const passWord = document.querySelector(".pasword");
 const login = document.querySelector(".login-btn");
 
 
+
 login.addEventListener("click", function (event) {
   event.preventDefault();
   var logObj = {
@@ -42,6 +43,7 @@ login.addEventListener("click", function (event) {
       // Store the user's email in session storage
       
        sessionStorage.setItem('userEmail', logObj.email);
+      
       alert("Sigin succesfully");
       window.location.href = "./index.html";
       
