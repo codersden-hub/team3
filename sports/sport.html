@@ -5,7 +5,7 @@
     <title>Quiz Website</title>
   </head>
   <body>
-    <h1>Take Quiz!</h1>
+    <h1>Quiz Time!</h1>
     <div id="question-container">
       <p id="question"></p>
       <ul id="choices"></ul>
@@ -13,7 +13,7 @@
   </body>
   <script>
     const apiUrl =
-      "https://opentdb.com/api.php?amount=10&category=21&difficulty=easy&type=multiple"; // Example Trivia API URL
+      "https://opentdb.com/api.php?amount=10&category=21&difficulty=easy&type=multiple";
     const questionContainer = document.getElementById("question-container");
     const questionElement = document.getElementById("question");
     const choicesElement = document.getElementById("choices");
@@ -24,21 +24,17 @@
     async function fetchQuestions() {
       const response = await fetch(apiUrl);
       const data = await response.json();
-
-
-      // Remove symbols that is not clean
-      questions = data.results.map(question => ({
-         ...question,
-         question: removeHtmlEntities(question.question)
-      })) 
+      questions = data.results.map((question) => ({
+        ...question,
+        question: removeHtmlEntities(question.question),
+      }));
       displayQuestion();
     }
 
-
     function removeHtmlEntities(text) {
-  return text.replace(/&[^;]+;/g, ''); // Replace all HTML entities
-}
-
+      return text.replace(/&[^;]+;/g, "");
+      s;
+    }
 
     function displayQuestion() {
       const currentQuestion = questions[currentQuestionIndex];
@@ -62,14 +58,12 @@
     function checkAnswer(selectedChoice) {
       const currentQuestion = questions[currentQuestionIndex];
       if (selectedChoice === currentQuestion.correct_answer) {
-        // Increment score or provide feedback
         score++;
       }
       currentQuestionIndex++;
       if (currentQuestionIndex < questions.length) {
         displayQuestion();
       } else {
-        // Quiz finished, show results
         displayResults();
       }
     }
@@ -77,7 +71,7 @@
     let score = 0;
 
     function displayResults() {
-      `<h2>Quiz Completed</h2>  <p>Your score: ${score} out of ${questions.length}</p>  <h3>🏆🏆🏆</h3> 
+      questionContainer.innerHTML = `<h2>Quiz Completed</h2>  <p>Your score: ${score} out of ${questions.length}</p>  <h3>🏆🏆🏆</h3> 
       <a href="../index.html">
       <button> Return to homepage </button>
       </a>`;

@@ -10,23 +10,28 @@
       <p id="question"></p>
       <ul id="choices"></ul>
     </div>
-    <!-- <button id="next-button">Next</button> -->
   </body>
   <script>
     const apiUrl =
-      "https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple"; // Example Trivia API URL
+      "https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple";
     const questionContainer = document.getElementById("question-container");
     const questionElement = document.getElementById("question");
     const choicesElement = document.getElementById("choices");
-    // const nextButton = document.getElementById("next-button");
     let currentQuestionIndex = 0;
     let questions = [];
 
     async function fetchQuestions() {
       const response = await fetch(apiUrl);
       const data = await response.json();
-      questions = data.results;
+      questions = data.results.map((question) => ({
+        ...question,
+        question: removeHtmlEntities(question.question),
+      }));
       displayQuestion();
+    }
+
+    function removeHtmlEntities(text) {
+      return text.replace(/&[^;]+;/g, "");
     }
 
     function displayQuestion() {
@@ -51,27 +56,15 @@
     function checkAnswer(selectedChoice) {
       const currentQuestion = questions[currentQuestionIndex];
       if (selectedChoice === currentQuestion.correct_answer) {
-        // Increment score or provide feedback
         score++;
       }
       currentQuestionIndex++;
       if (currentQuestionIndex < questions.length) {
         displayQuestion();
       } else {
-        // Quiz finished, show results
         displayResults();
       }
     }
-
-    // nextButton.addEventListener("click", () => {
-    //   currentQuestionIndex++;
-    //   if (currentQuestionIndex < questions.length) {
-    //     displayQuestion();
-    //   } else {
-    //     // Quiz finished, show results
-    //     displayResults();
-    //   }
-    // });
 
     let score = 0;
 
@@ -81,12 +74,6 @@
         <a href="../index.html">
         <button> Return to homepage </button>
         </a>`;
-      // const restartButton = document.getElementById("restart-button");
-      // restartButton.addEventListener("click", () => {
-      //   currentQuestionIndex = 0;
-      //   score = 0;
-      //   fetchQuestions();
-      // });
     }
 
     fetchQuestions();
