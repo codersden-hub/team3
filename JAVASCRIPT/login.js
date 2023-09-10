@@ -44,7 +44,7 @@ login.addEventListener("click", function (event) {
       
        sessionStorage.setItem('userEmail', logObj.email);
       
-      alert("Sigin succesfully");
+      // alert("Sigin succesfully");
       window.location.href = "./index.html";
       
     })

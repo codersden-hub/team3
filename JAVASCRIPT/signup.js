@@ -45,7 +45,7 @@ signUp.addEventListener("click", function (event) {
       //redirect to login page if its succesfull
       window.location.href = "./login.html";
 
-      alert("Signup Sucessfull");
+      // alert("Signup Sucessfull");
 
       console.log(obj.email, obj.password);
     })
