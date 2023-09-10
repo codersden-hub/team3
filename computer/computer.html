@@ -24,6 +24,12 @@
     async function fetchQuestions() {
       const response = await fetch(apiUrl);
       const data = await response.json();
+
+     
+
+     
+
+      // Remove symbols that is not clea
       questions = data.results.map((question) => ({
         ...question,
         question: removeHtmlEntities(question.question),
@@ -31,9 +37,14 @@
       displayQuestion();
     }
 
+
+
+
     function removeHtmlEntities(text) {
       return text.replace(/&[^;]+;/g, "");
     }
+
+
 
     function displayQuestion() {
       const currentQuestion = questions[currentQuestionIndex];
