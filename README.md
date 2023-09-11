@@ -42,7 +42,11 @@ CONTRIBUTING
 
 This repo conatains all our codes, if you are interested in contributing, reporting Issues, suggesting improvements and submitting pull requests
 
+Here is a link to the demo 
+https://denthree.netlify.app/signup.html
 
+Here is a link to our trello board
+https://trello.com/b/mAGFXzwO/group-three
 
 
 
