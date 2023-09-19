@@ -96,10 +96,29 @@ body{
   top: -25%;
 }
 
-.play_icon > img {
+.play_general > img{
   width: 17%;
 }
 
+.play_sport > img{
+  width: 17%;
+}
+
+.play_music > img{
+  width: 17%;
+}
+
+.play_history > img{
+  width: 17%;
+}
+
+.play_computer > img{
+  width: 17%;
+}
+
+.play_travel > img{
+  width: 17%;
+}
 
 .content {
   width: 30%;
@@ -124,6 +143,7 @@ body{
   font-size: 40px;
   font-weight: 700;
 }
+
 
 .music-class:hover{
   color: #7950f2;
@@ -152,6 +172,11 @@ body{
 }
 
 .computer-class:hover{
+  color: #7950f2;
+  transition: color 0.3s ease;
+}
+
+.play_icon > img:hover{
   color: #7950f2;
   transition: color 0.3s ease;
 }
